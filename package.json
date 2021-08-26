@@ -1,0 +1,19 @@
+{
+  "name": "bip39toalgorand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "elliptic": "^6.5.4",
+    "random-number-csprng": "^1.0.2"
+  },
+  "devDependencies": {
+    "bip39": "^3.0.4"
+  }
+}
