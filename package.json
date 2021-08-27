@@ -9,11 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bip39": "^3.0.4",
-    "create-hmac": "^1.1.7",
-    "hi-base32": "^0.5.1",
+    "create-hmac": "1.1.7",
+    "hi-base32": "0.5.1",
     "js-nacl": "1.2.1",
-    "js-sha512": "^0.8.0"
+    "js-sha512": "0.8.0"
   },
   "devDependencies": {
     "bip39": "^3.0.4"
