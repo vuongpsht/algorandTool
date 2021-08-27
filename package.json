@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "crypto-js": "^4.1.1",
-    "elliptic": "^6.5.4",
-    "js-sha512": "^0.8.0",
-    "random-number-csprng": "^1.0.2"
+    "bip39": "^3.0.4",
+    "create-hmac": "^1.1.7",
+    "hi-base32": "^0.5.1",
+    "js-nacl": "1.2.1",
+    "js-sha512": "^0.8.0"
   },
   "devDependencies": {
     "bip39": "^3.0.4"
