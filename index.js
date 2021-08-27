@@ -3,7 +3,6 @@ const createHmac = require("create-hmac");
 const { instantiate } = require("js-nacl/lib/nacl_factory");
 const sha512 = require('js-sha512');
 const base32 = require('hi-base32');
-const algo = require('algosdk')
 var ED25519_CURVE = 'ed25519 seed';
 var HARDENED_OFFSET = 0x80000000;
 var naclInstance = void 0;
@@ -89,12 +88,10 @@ export const bip39MnemonicToAlgorandAccount = async (mnemonics) => {
     var childKeys = derivePath(algoPath, seed);
     var pubKey = getPublicKey(childKeys.key);
     var encodedPubKey = encode(pubKey);
-    const acc = algo.masterDerivationKeyToMnemonic(childKeys.key)
     return {
       address: encodedPubKey,
       privKey: childKeys.key.toString('hex'),
       publicKey: pubKey.toString('hex'),
-      acc
     };
   } catch (error) {
     console.log(error);
