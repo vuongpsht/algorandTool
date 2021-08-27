@@ -82,7 +82,7 @@ function encode(address) {
 }
 
 
-const accountHelper = async (mnemonics) => {
+export const bip39MnemonicToAlgorandAccount = async (mnemonics) => {
   try {
     const seed = await bip39.mnemonicToSeed(mnemonics);
     var algoPath = "m/44'/283'/0'/0'/0'";
@@ -100,5 +100,3 @@ const accountHelper = async (mnemonics) => {
     console.log(error);
   }
 }
-
-accountHelper('maple move steak prefer blossom rare magnet home struggle prefer believe eagle leaf tomorrow tortoise').then(console.log)
