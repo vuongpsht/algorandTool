@@ -8,7 +8,6 @@ var HARDENED_OFFSET = 0x80000000;
 var naclInstance = void 0;
 
 instantiate(function (nacl) {
-  console.log('call this one');
   return naclInstance = nacl;
 });
 var replaceDerive = function replaceDerive(val) {
@@ -47,13 +46,10 @@ const derivePath = function derivePath(path, seed) {
   var _getMasterKeyFromSeed = getMasterKeyFromSeed(seed),
     key = _getMasterKeyFromSeed.key,
     chainCode = _getMasterKeyFromSeed.chainCode;
-  console.log({ path })
 
   var segments = path.split('/').slice(1).map(replaceDerive).map(function (el) {
     return parseInt(el, 10);
   });
-  console.log({ segments })
-
   return segments.reduce(function (parentKeys, segment) {
     return CKDPriv(parentKeys, segment + HARDENED_OFFSET);
   }, { key: key, chainCode: chainCode });
