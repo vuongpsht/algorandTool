@@ -86,8 +86,7 @@ export const bip39MnemonicToAlgorandAccount = async (mnemonics) => {
     var encodedPubKey = encode(pubKey);
     return {
       address: encodedPubKey,
-      privKey: childKeys.key.toString('hex'),
-      publicKey: pubKey.toString('hex'),
+      key: childKeys
     };
   } catch (error) {
     console.log(error);
